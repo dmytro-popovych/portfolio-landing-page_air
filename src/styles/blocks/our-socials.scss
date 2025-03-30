@@ -1,0 +1,49 @@
+.our-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  &__title {
+    font-family: $main-font-family;
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 700;
+    color: $text-main-color;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 50%;
+  }
+
+  &__links {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: center;
+
+    @include hover(transform, scale(1.1));
+
+    &--facebook {
+      background-image: url(../icons/facebook.avif);
+
+      @include hover(background-image, url(../icons/facebook-blue.avif));
+    }
+
+    &--x {
+      background-image: url(../icons/x-white.avif);
+
+      @include hover(background-image, url(../icons/x-blue.avif));
+    }
+
+    &--instagram {
+      background-image: url(../icons/instagram.avif);
+
+      @include hover(background-image, url(../icons/instagram-blue.avif));
+    }
+  }
+}
